@@ -33,3 +33,21 @@ Route::post('/api/v1/employees', 'EmployeesController@store');
 Route::post('/api/v1/employees/{id?}', 'EmployeesController@update');
 Route::delete('/api/v1/employees/{id?}', 'EmployeesController@destroy');
 
+Route::get('/icross', 'IcrossController@index');
+Route::get('/directions', function() {
+    $array = array();
+
+    $url = "http://dev.id.extramarks.com/content_data/memorymatch/2019/07/22/2227184/2227184.json";
+
+    $json = json_decode(file_get_contents($url));
+
+    // echo "<pre>" . print_r($json[0]->data, 1) ."</pre>";
+    foreach($json[0]->data as $k => $v) {
+        $array[] = array(
+            'question' => $v->questiondata->question,
+            'options' => $v->optiondata->options[0]->optiontext,
+            'answer' => $v->rightanswerdata->rightanswer[0]->answer,
+        );
+    }
+    return Response::Json($array);
+});
