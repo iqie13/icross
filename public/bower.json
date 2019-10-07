@@ -1,0 +1,23 @@
+{
+  "name": "iqsoft",
+  "authors": [
+    "riki.nurhidayat91@gmail.com"
+  ],
+  "description": "IQ-Soft App",
+  "main": "",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.7.2",
+    "angular-route": "^1.7.2",
+    "bootstrap": "^4.1.1",
+    "angular-cookies": "^1.7.2"
+  }
+}
