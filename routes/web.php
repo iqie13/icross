@@ -34,8 +34,7 @@ Route::post('/api/v1/employees/{id?}', 'EmployeesController@update');
 Route::delete('/api/v1/employees/{id?}', 'EmployeesController@destroy');
 
 Route::get('/icross', 'IcrossController@index');
-Route::get('/directions', function() {
-    $array = array();
+Route::get('/api/v1/directions', function() {
 
     $url = "http://dev.id.extramarks.com/content_data/memorymatch/2019/07/22/2227184/2227184.json";
 

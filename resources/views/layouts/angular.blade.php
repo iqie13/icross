@@ -51,6 +51,7 @@
     
     <script type="text/javascript" src="{{asset('app/app.js')}}"></script>
     <script type="text/javascript" src="{{asset('app/controllers/employee.js')}}"></script>
+    <script type="text/javascript" src="{{asset('app/controllers/icross.js')}}"></script>
 
     </body>
 </html>

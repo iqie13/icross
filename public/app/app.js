@@ -1,2 +1,2 @@
 var app = angular.module('employeeRecords', [])
-    .constant('API_URL', 'http://laravel.local:8000/api/v1/');
+    .constant('API_URL', 'http://localhost:8000/api/v1/');

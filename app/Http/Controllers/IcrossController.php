@@ -9,4 +9,8 @@ class IcrossController extends Controller
     public function index() {
         return view('icross/index');
     }
+
+    public function directions(Request $req) {
+        echo $req;
+    }
 }
