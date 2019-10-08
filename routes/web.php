@@ -48,5 +48,5 @@ Route::get('/api/v1/directions', function() {
             'answer' => $v->rightanswerdata->rightanswer[0]->answer,
         );
     }
-    return Response::Json($array);
+    return Response::Json($json[0]);
 });
