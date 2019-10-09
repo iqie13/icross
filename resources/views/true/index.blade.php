@@ -28,9 +28,9 @@
                                 <div class="card-header">
                                     <span class="badge badge-primary">@{{quest.questiondata.questionid}}/@{{quest.questiondata.numQuestions}}</span> @{{quest.questiondata.question}}
                                 </div>
-                                <div class="card-body" ng-repeat="(ind, ans) in quest.optiondata.options">
+                                <div class="card-body">
                                     <div class="row">
-                                        <div class="col-6">
+                                        <div class="col-6" ng-repeat="(ind, ans) in quest.optiondata.options">
                                             <button type="button" class="btn btn-primary" ng-disabled="answered[index]" ng-class="['ans-' + index + ind]" ng-click="checkAnswer(ans.optionid, quest.rightanswerdata.rightanswer[0].answerid, index, ind)">
                                                 @{{ans.optiontext}}
                                             </button>
@@ -63,73 +63,76 @@
                                     @{{truefalse.language.shortreport}}
                                 </div>
                                 <div class="card-body">
-                                    <div class="col-6">
-                                        <div class="row">
-                                            <span class="badge badge-secondary col-12 py-2 mb-2">
-                                                <div class="row">
-                                                    <span class="col-6" style="text-align: left">
-                                                    @{{truefalse.language.totalQuestions}}
-                                                    </span>
-                                                    <span class="col-6" style="text-align: right">
-                                                        @{{truefalse.data.length}}
-                                                    </span>
-                                                </div>
-                                            </span>
-                                            <span class="badge badge-secondary col-12 py-2 mb-2">
-                                                <div class="row">
-                                                    <span class="col-6" style="text-align: left">
-                                                    @{{truefalse.language.totalAttempted}}
-                                                    </span>
-                                                    <span class="col-6" style="text-align: right">
-                                                        @{{try}}
-                                                    </span>
-                                                </div>
-                                            </span>
-                                            <span class="badge badge-secondary col-12 py-2 mb-2">
-                                                <div class="row">
-                                                    <span class="col-6" style="text-align: left">
-                                                    @{{truefalse.language.totalSkippedAnswers}}
-                                                    </span>
-                                                    <span class="col-6" style="text-align: right">
-                                                        @{{nottry}}
-                                                    </span>
-                                                </div>
-                                            </span>
-                                            <span class="badge badge-secondary col-12 py-2 mb-2">
-                                                <div class="row">
-                                                    <span class="col-6" style="text-align: left">
-                                                    @{{truefalse.language.totalRightAnswers}}
-                                                    </span>
-                                                    <span class="col-6" style="text-align: right">
-                                                        @{{rightAnswer}}
-                                                    </span>
-                                                </div>
-                                            </span>
-                                            <span class="badge badge-secondary col-12 py-2 mb-2">
-                                                <div class="row">
-                                                    <span class="col-6" style="text-align: left">
-                                                    @{{truefalse.language.totalwrong}}
-                                                    </span>
-                                                    <span class="col-6" style="text-align: right">
-                                                        @{{wrongAnswer}}
-                                                    </span>
-                                                </div>
-                                            </span>
-                                            <span class="badge badge-secondary col-12 py-2 mb-2">
-                                                <div class="row">
-                                                    <span class="col-6" style="text-align: left">
-                                                    @{{truefalse.language.percentage}}
-                                                    </span>
-                                                    <span class="col-6" style="text-align: right">
-                                                        @{{percentageRight | number:2}}%
-                                                    </span>
-                                                </div>
-                                            </span>
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <div class="row">
+                                                <span class="badge badge-secondary col-12 py-2 mb-2">
+                                                    <div class="row">
+                                                        <span class="col-6" style="text-align: left">
+                                                        @{{truefalse.language.totalQuestions}}
+                                                        </span>
+                                                        <span class="col-6" style="text-align: right">
+                                                            @{{truefalse.data.length}}
+                                                        </span>
+                                                    </div>
+                                                </span>
+                                                <span class="badge badge-secondary col-12 py-2 mb-2">
+                                                    <div class="row">
+                                                        <span class="col-6" style="text-align: left">
+                                                        @{{truefalse.language.totalAttempted}}
+                                                        </span>
+                                                        <span class="col-6" style="text-align: right">
+                                                            @{{try}}
+                                                        </span>
+                                                    </div>
+                                                </span>
+                                                <span class="badge badge-secondary col-12 py-2 mb-2">
+                                                    <div class="row">
+                                                        <span class="col-6" style="text-align: left">
+                                                        @{{truefalse.language.totalSkippedAnswers}}
+                                                        </span>
+                                                        <span class="col-6" style="text-align: right">
+                                                            @{{nottry}}
+                                                        </span>
+                                                    </div>
+                                                </span>
+                                                <span class="badge badge-secondary col-12 py-2 mb-2">
+                                                    <div class="row">
+                                                        <span class="col-6" style="text-align: left">
+                                                        @{{truefalse.language.totalRightAnswers}}
+                                                        </span>
+                                                        <span class="col-6" style="text-align: right">
+                                                            @{{rightAnswer}}
+                                                        </span>
+                                                    </div>
+                                                </span>
+                                                <span class="badge badge-secondary col-12 py-2 mb-2">
+                                                    <div class="row">
+                                                        <span class="col-6" style="text-align: left">
+                                                        @{{truefalse.language.totalwrong}}
+                                                        </span>
+                                                        <span class="col-6" style="text-align: right">
+                                                            @{{wrongAnswer}}
+                                                        </span>
+                                                    </div>
+                                                </span>
+                                                <span class="badge badge-secondary col-12 py-2 mb-2">
+                                                    <div class="row">
+                                                        <span class="col-6" style="text-align: left">
+                                                        @{{truefalse.language.percentage}}
+                                                        </span>
+                                                        <span class="col-6" style="text-align: right">
+                                                            @{{percentageRight | number:2}}%
+                                                        </span>
+                                                    </div>
+                                                </span>
 
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="col-6">
-
+                                        <div class="col-6">
+                                            <canvas id="pie" class="chart chart-pie" chart-data="dataChart" chart-labels="labelsChart" chart-options="options" chart-colors="colours">
+                                            </canvas>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

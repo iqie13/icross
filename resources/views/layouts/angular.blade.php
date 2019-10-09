@@ -57,6 +57,8 @@
     <script type="text/javascript" src="{{asset('app/controllers/employee.js')}}"></script>
     <script type="text/javascript" src="{{asset('app/controllers/icross.js')}}"></script>
     <script type="text/javascript" src="{{asset('app/controllers/true.js')}}"></script>
+    <script type="text/javascript" src="{{asset('node_modules/chart.js/dist/Chart.min.js')}}"></script>
+    <script type="text/javascript" src="{{asset('node_modules/angular-chart.js/dist/angular-chart.min.js')}}"></script>
 
     </body>
 </html>
