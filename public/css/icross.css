@@ -3,6 +3,16 @@
     background: linear-gradient(to bottom, #d8eeff 0%,#4096ee 100%);
 }
 
+#dragdropcard {
+    background-image: url("http://dev.id.extramarks.com/template/emAssessment/image/dndbg.jpg");
+    background-repeat: no-repeat;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: 100%;
+    background-position: center;
+}
+
 .memorybox {
     margin: 50px;
     width: 950px;

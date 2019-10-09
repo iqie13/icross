@@ -14,14 +14,16 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="/">Link 1 <span class="sr-only">(current)</span></a>
+            <li class="nav-item">
+                <a class="nav-link" href="/">Link 1 
+                {{--  <span class="sr-only">(current)</span>  --}}
+                </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/true">Link 2</a>
+                <a class="nav-link" href="/icross">Link 2</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/true">Link 3</a>
+                <a class="nav-link" href="#">Link 3</a>
             </li>
             {{--  <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -51,12 +53,14 @@
     <script type="text/javascript" src="{{asset('bower_components/angular-route/angular-route.min.js')}}"></script>
     <script type="text/javascript" src="{{asset('bower_components/angular-cookies/angular-cookies.min.js')}}"></script>
     <script type="text/javascript" src="{{ asset('js/app.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/angular-dragdrop.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('bower_components/bootstrap/dist/js/bootstrap.min.js') }}"></script>
     
     <script type="text/javascript" src="{{asset('app/app.js')}}"></script>
     <script type="text/javascript" src="{{asset('app/controllers/employee.js')}}"></script>
     <script type="text/javascript" src="{{asset('app/controllers/icross.js')}}"></script>
     <script type="text/javascript" src="{{asset('app/controllers/true.js')}}"></script>
+    <script type="text/javascript" src="{{asset('app/controllers/dragdrop.js')}}"></script>
     <script type="text/javascript" src="{{asset('node_modules/chart.js/dist/Chart.min.js')}}"></script>
     <script type="text/javascript" src="{{asset('node_modules/angular-chart.js/dist/angular-chart.min.js')}}"></script>
 

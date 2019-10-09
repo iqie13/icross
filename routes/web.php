@@ -33,8 +33,10 @@ Route::post('/api/v1/employees', 'EmployeesController@store');
 Route::post('/api/v1/employees/{id?}', 'EmployeesController@update');
 Route::delete('/api/v1/employees/{id?}', 'EmployeesController@destroy');
 
-Route::get('/', 'IcrossController@index');
-Route::get('/true', 'TrueController@index');
+Route::get('/', 'TrueController@index');
+Route::get('/icross', 'IcrossController@index');
+Route::get('/dragdrop', 'DragdropController@index');
+
 Route::get('/api/v1/directions', function() {
 
     $url = "http://dev.id.extramarks.com/content_data/memorymatch/2019/07/22/2227184/2227184.json";
@@ -46,6 +48,14 @@ Route::get('/api/v1/directions', function() {
 Route::get('/api/v1/truefalse', function() {
 
     $url = "http://dev.id.extramarks.com/content_data/truefalse/2019/07/22/2227191/2227191.json";
+
+    $json = json_decode(file_get_contents($url));
+    return Response::Json($json[0]);
+});
+
+Route::get('/api/v1/dragdrop', function() {
+
+    $url = "http://dev.id.extramarks.com/content_data/draganddrop/2019/07/22/2227189/2227189.json";
 
     $json = json_decode(file_get_contents($url));
     return Response::Json($json[0]);
