@@ -8,10 +8,6 @@ app.controller('icrossController', function ($scope, $http, API_URL) {
         $('#soal').hide()
 
         $("#btn-start").click(function () {
-            // $("#soal").toggle(function () {
-            //     // Animation complete.
-            //     $('#petunjuk').hide()
-            // });
             $('#soal').show()
             $('#btn-submit').show()
             $('#petunjuk').hide()
