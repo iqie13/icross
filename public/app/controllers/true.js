@@ -28,7 +28,7 @@ app.controller('trueController', function ($scope, $http, API_URL) {
         $scope.rightAnswer = 0;
         $scope.wrongAnswer = 0;
         $scope.truefalse = response.data;
-        console.log(response);
+        // console.log(response);
 
         var answered = []
 
@@ -75,7 +75,7 @@ app.controller('trueController', function ($scope, $http, API_URL) {
 
         $scope.submit = function () {
             var myAnswer = []
-            console.log($scope.answerData)
+            // console.log($scope.answerData)
 
             $scope.truefalse.data.forEach((element, index) => {
                 myAnswer[index] = 'Belum dijawab'
@@ -85,7 +85,7 @@ app.controller('trueController', function ($scope, $http, API_URL) {
                         if (index == el.index) {
                             myAnswer[index] = element.optiondata.options[el.ind].optiontext
                             if (element.rightanswerdata.rightanswer[0].answerid == el.myAnswer) {
-                                console.log(el.myAnswer)
+                                // console.log(el.myAnswer)
                                 $('.my-' + index).css('color', 'green')
                             } else {
                                 $('.my-' + index).css('color', 'red')
@@ -101,9 +101,9 @@ app.controller('trueController', function ($scope, $http, API_URL) {
             $scope.wrongAnswer = $scope.truefalse.data.length - rightAnswer.length
             $scope.percentageRight = ($scope.rightAnswer / $scope.truefalse.data.length) * 100
             $scope.percentageWrong = ($scope.wrongAnswer / $scope.truefalse.data.length) * 100
-            $scope.labelsChart = ["Benar (%)", "Salah (%)"];
-            $scope.dataChart = [$scope.percentageRight, $scope.percentageWrong];
-            $scope.colours = ["#04A334","#E41208"]
+            $scope.labelsChart = ["Benar (" + $scope.percentageRight + "%)", "Salah (" + $scope.percentageWrong + "%)"];
+            $scope.dataChart = [$scope.rightAnswer, $scope.wrongAnswer];
+            $scope.colours = ["#04A334", "#E41208"]
         }
     });
 });
