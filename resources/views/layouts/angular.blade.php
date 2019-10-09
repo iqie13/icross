@@ -23,7 +23,7 @@
                 <a class="nav-link" href="/icross">Link 2</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Link 3</a>
+                <a class="nav-link" href="/dragdrop">Link 3</a>
             </li>
             {{--  <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
