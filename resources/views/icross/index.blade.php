@@ -20,23 +20,25 @@
 
                     <div id="soal" class="row">
                         <div class="col-5" style="text-align: right">
-                            <div ng-repeat = "quest in question" class="mb-1">
-                                <a href="#" class="btn btn-raised btn-light">
+                            <div ng-repeat="(index, quest) in question" class="mb-1">
+                                <a href="#" class="btn btn-raised btn-light" ng-click="clickQuestion(quest, index)">
                                     @{{quest.question}}
                                 </a>
                             </div>
                         </div>
                         <div class="col-3"></div>
                         <div class="col-4">
-                            <div ng-repeat = "answ in answer" class="mb-1">
-                                <a href="#" class="btn btn-raised btn-light">
+                            <div class="mb-1" ng-repeat="(index, answ) in answer">
+                                <a href="#" class="btn btn-raised btn-light" ng-click="clickAnswer(answ, index)">
                                     @{{answ.answertext}}
                                 </a>
+                                <img ng-class="['r-' + index]" class="right-answer" src="http://dev.id.extramarks.com/template/emAssessment/image/tick.png" style="display: none">
+                                <img ng-class="['w-' + index]" class="wrong-answer" src="http://dev.id.extramarks.com/template/emAssessment/image/wrong.png" style="display: none">
                             </div>
                         </div>
                     </div>
                     <div style="text-align: center">
-                        <a href="#" id="btn-submit" class="btn btn-raised btn-success mb-3" style="display: none">
+                        <a href="#" id="btn-submit" class="btn btn-raised btn-success mb-3" ng-click="submit()" style="display: none">
                             @{{icross.language.submit}}
                         </a>
                     </div>
