@@ -12,25 +12,30 @@
                     <div id="petunjuk" class="text-left">
                     </div>
 
-                    <a href="#" id="btn" class="btn btn-raised btn-outline-primary mb-3">
+                    <a href="#" id="btn-start" class="btn btn-raised btn-outline-primary mb-3">
                         @{{icross.language.start}}
                     </a>
 
                     <div id="soal" class="row">
                         <div class="col-6">
-                            <div ng-repeat = "ic in icross.data | orderBy" class="mb-1">
+                            <div ng-repeat = "quest in question" class="mb-1">
                                 <a href="#" class="btn btn-raised btn-outline-info">
-                                    @{{ic.questiondata.question}}
+                                    @{{quest.question}}
                                 </a>
                             </div>
                         </div>
                         <div class="col-6">
-                            <div ng-repeat = "ic in icross.data | orderBy: 'optiontext'" class="mb-1">
+                            <div ng-repeat = "answ in answer" class="mb-1">
                                 <a href="#" class="btn btn-raised btn-outline-info">
-                                    @{{ic.optiondata.options[0].optiontext}}
+                                    @{{answ.answertext}}
                                 </a>
                             </div>
                         </div>
+                    </div>
+                    <div class="row">
+                        <a href="#" id="btn-submit" class="btn btn-raised btn-outline-success mb-3" style="display: none">
+                            @{{icross.language.submit}}
+                        </a>
                     </div>
                 </div>
             </div>
