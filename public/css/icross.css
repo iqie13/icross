@@ -1,0 +1,23 @@
+#memorycard {
+    /* background-image:url('http://dev.id.extramarks.com/template/emAssessment/image/mcPuzel-background.jpg') */
+    background: linear-gradient(to bottom, #d8eeff 0%,#4096ee 100%);
+}
+
+.memorybox {
+    margin: 50px;
+    width: 950px;
+    height: auto;
+    max-height: 350px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    border: 1px solid;
+    text-align: left;
+    padding: 15px;
+    line-height: 30px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    font-size: 20px;
+    font-weight: bold;
+    color: #333333;
+    box-shadow: 0 0 10px #000000;
+}
