@@ -8,32 +8,35 @@
                 <div class="card-header">
                     @{{icross.designParamiter.title}}
                 </div>
-                <div class="card-body">
-                    <div id="petunjuk" class="text-left">
+                <div id="memorycard" class="card-body">
+                    <div id="petunjuk" class="memorybox text-left">
                     </div>
 
-                    <a href="#" id="btn-start" class="btn btn-raised btn-outline-primary mb-3">
+                    <div style="text-align: center">
+                    <a href="#" id="btn-start" class="btn btn-raised btn-success mb-3">
                         @{{icross.language.start}}
                     </a>
+                    </div>
 
                     <div id="soal" class="row">
-                        <div class="col-6">
+                        <div class="col-5" style="text-align: right">
                             <div ng-repeat = "quest in question" class="mb-1">
-                                <a href="#" class="btn btn-raised btn-outline-info">
+                                <a href="#" class="btn btn-raised btn-light">
                                     @{{quest.question}}
                                 </a>
                             </div>
                         </div>
-                        <div class="col-6">
+                        <div class="col-3"></div>
+                        <div class="col-4">
                             <div ng-repeat = "answ in answer" class="mb-1">
-                                <a href="#" class="btn btn-raised btn-outline-info">
+                                <a href="#" class="btn btn-raised btn-light">
                                     @{{answ.answertext}}
                                 </a>
                             </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <a href="#" id="btn-submit" class="btn btn-raised btn-outline-success mb-3" style="display: none">
+                    <div style="text-align: center">
+                        <a href="#" id="btn-submit" class="btn btn-raised btn-success mb-3" style="display: none">
                             @{{icross.language.submit}}
                         </a>
                     </div>

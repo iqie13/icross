@@ -101,6 +101,9 @@ app.controller('trueController', function ($scope, $http, API_URL) {
             $scope.wrongAnswer = $scope.truefalse.data.length - rightAnswer.length
             $scope.percentageRight = ($scope.rightAnswer / $scope.truefalse.data.length) * 100
             $scope.percentageWrong = ($scope.wrongAnswer / $scope.truefalse.data.length) * 100
+            $scope.labelsChart = ["Benar (%)", "Salah (%)"];
+            $scope.dataChart = [$scope.percentageRight, $scope.percentageWrong];
+            $scope.colours = ["#04A334","#E41208"]
         }
     });
 });

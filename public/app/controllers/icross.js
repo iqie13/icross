@@ -12,6 +12,11 @@ app.controller('icrossController', function ($scope, $http, API_URL) {
             $('#btn-submit').show()
             $('#petunjuk').hide()
             $('#btn-start').hide()
+            $('#memorycard').css({
+                "background-image": "url('http://dev.id.extramarks.com/template/emAssessment/image/mcPuzel-background.jpg')",
+                "background-repeat": "no-repeat",
+                "background-size": "cover"
+            })
         });
 
 

@@ -3,6 +3,7 @@
     <head>
         <title>Laravel & Angular</title>
         <link rel="stylesheet" type="text/css" href="{{ asset('bower_components/bootstrap/dist/css/bootstrap.min.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/icross.css') }}">
     </head>
     <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-success">
@@ -56,6 +57,8 @@
     <script type="text/javascript" src="{{asset('app/controllers/employee.js')}}"></script>
     <script type="text/javascript" src="{{asset('app/controllers/icross.js')}}"></script>
     <script type="text/javascript" src="{{asset('app/controllers/true.js')}}"></script>
+    <script type="text/javascript" src="{{asset('node_modules/chart.js/dist/Chart.min.js')}}"></script>
+    <script type="text/javascript" src="{{asset('node_modules/angular-chart.js/dist/angular-chart.min.js')}}"></script>
 
     </body>
 </html>
