@@ -14,12 +14,15 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="/">Link 1 <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
+                <a class="nav-link" href="/true">Link 2</a>
             </li>
-            <li class="nav-item dropdown">
+            <li class="nav-item">
+                <a class="nav-link" href="/true">Link 3</a>
+            </li>
+            {{--  <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Dropdown
                 </a>
@@ -29,10 +32,10 @@
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="#">Something else here</a>
                 </div>
-            </li>
-            <li class="nav-item">
+            </li>  --}}
+            {{--  <li class="nav-item">
                 <a class="nav-link disabled" href="#">Disabled</a>
-            </li>
+            </li>  --}}
             </ul>
             <form class="form-inline my-2 my-lg-0">
             <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
@@ -52,6 +55,7 @@
     <script type="text/javascript" src="{{asset('app/app.js')}}"></script>
     <script type="text/javascript" src="{{asset('app/controllers/employee.js')}}"></script>
     <script type="text/javascript" src="{{asset('app/controllers/icross.js')}}"></script>
+    <script type="text/javascript" src="{{asset('app/controllers/true.js')}}"></script>
 
     </body>
 </html>
