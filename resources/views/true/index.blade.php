@@ -139,7 +139,35 @@
                                 <div class="card-header">
                                     @{{truefalse.language.detailreport}}
                                 </div>
-                                <div class="card-body"></div>
+                                <div class="card-body">
+                                    <div class="row"  ng-repeat="(index, quest) in truefalse.data">
+                                        <div class="card-body mb-1" style="background-color: darkgrey; border-radius: .25rem">
+                                            <div class="row" >
+                                                <div class="col-6 mb-2">
+                                                    Pertanyaanmu
+                                                </div>
+                                                <div class="col-6 mb-2">
+                                                    @{{quest.questiondata.question}}
+                                                </div>
+                                                <div class="col-6 mb-2">
+                                                    Jawabanmu
+                                                </div>
+                                                <div class="col-6 mb-2" ng-class="['my-' + index]">
+                                                    @{{myAnswer[index]}}
+                                                </div>
+                                                <div class="col-6 mb-2">
+                                                    jawaban yang benar
+                                                </div>
+                                                <div class="col-6 mb-2" style="color: yellow">
+                                                    @{{quest.rightanswerdata.rightanswer[0].answer}}
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <!-- <span class="badge badge-secondary col-12 py-2 mb-2" style="text-align: left">
+                                        </span> -->
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
