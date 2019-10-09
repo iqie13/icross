@@ -167,10 +167,23 @@
                                             </div>
 
                                         </div>
-                                        <!-- <span class="badge badge-secondary col-12 py-2 mb-2" style="text-align: left">
-                                        </span> -->
                                     </div>
                                 </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="row">
+                                <!-- <div class="col-4">
+                                    &nbsp;
+                                </div> -->
+                                <div class="col-12" style="text-align: center">
+                                    <a href="#" id="btn-restart" ng-click="backHome()" class="btn btn-raised btn-primary">
+                                        @{{truefalse.language.restart}}
+                                    </a>
+                                </div>
+                                <!-- <div class="col-4">
+                                    &nbsp;
+                                </div> -->
                             </div>
                         </div>
                     </div>

@@ -106,4 +106,9 @@ app.controller('trueController', function ($scope, $http, API_URL) {
             $scope.colours = ["#04A334", "#E41208"]
         }
     });
+
+
+    $scope.backHome = function() {
+        location.reload()
+    }
 });
