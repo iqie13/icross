@@ -21,26 +21,26 @@
                     <div id="soal" class="row">
                         <div class="col-5" style="text-align: right">
                             <div ng-repeat="(index, quest) in question" class="mb-1">
-                                <a href="#" class="btn btn-raised btn-light" ng-click="clickQuestion(quest, index)">
-                                    @{{quest.question}}
-                                </a>
+                                <button href="#" id="btnQuest@{{quest.index}}" class="btn btn-raised btn-light" ng-click="clickQuestion(quest, index)">
+                                    @{{quest.question}} - @{{quest.rightanswerId}}
+                                </button>
                             </div>
                         </div>
                         <div class="col-3"></div>
                         <div class="col-4">
                             <div class="mb-1" ng-repeat="(index, answ) in answer">
-                                <a href="#" class="btn btn-raised btn-light" ng-click="clickAnswer(answ, index)">
-                                    @{{answ.answertext}}
-                                </a>
-                                <img ng-class="['r-' + index]" class="right-answer" src="http://dev.id.extramarks.com/template/emAssessment/image/tick.png" style="display: none">
-                                <img ng-class="['w-' + index]" class="wrong-answer" src="http://dev.id.extramarks.com/template/emAssessment/image/wrong.png" style="display: none">
+                                <button href="#" id="btn@{{answ.index}}" class="btn btn-raised btn-light answer" ng-click="clickAnswer(answ, index)">
+                                    @{{answ.answertext}}<span id="numQuest@{{answ.index}}"></span>
+                                </button>
+                                <img class="r-@{{answ.rightanswerId}}" class="right-answer" src="http://dev.id.extramarks.com/template/emAssessment/image/tick.png" style="display: none">
+                                <img class="w-@{{answ.rightanswerId}}" class="wrong-answer" src="http://dev.id.extramarks.com/template/emAssessment/image/wrong.png" style="display: none">
                             </div>
                         </div>
                     </div>
                     <div style="text-align: center">
-                        <a href="#" id="btn-submit" class="btn btn-raised btn-success mb-3" ng-click="submit()" style="display: none">
+                        <btn href="#" id="btn-submit" class="btn btn-raised btn-success mb-3" ng-click="submit()" style="display: none">
                             @{{icross.language.submit}}
-                        </a>
+                        </btn>
                     </div>
                 </div>
             </div>

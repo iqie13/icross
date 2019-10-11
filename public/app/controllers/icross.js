@@ -24,6 +24,7 @@ app.controller('icrossController', function ($scope, $http, API_URL) {
         var forQuestion = [];
         $scope.icross = response.data;
         console.log(response.data)
+        var no = 0;
         response.data.data.forEach((element, index) => {
             // console.log(element);
             // forAnswer.push({ "question": element.questiondata.question, "rightanswerId": element.rightanswerdata.rightanswer[0].answerid });
@@ -37,31 +38,47 @@ app.controller('icrossController', function ($scope, $http, API_URL) {
         var myAnswerRight = 0
         var myAnswer = []
         $scope.clickQuestion = function (data, index) {
-            console.log(data, index)
+            // console.log(data, index)
             myAnswerRight = data.rightanswerId
+            document.getElementById("btnQuest"+data.index).disabled = true;
+            $('.answer').prop({disabled:false})
+            $('#btnQuest'+data.index).addClass("btn-primary")
+            $('#btnQuest'+data.index).removeClass("btn-light")
+
         }
 
         $scope.clickAnswer = function (data, index) {
-            myAnswer.splice(index, 1)
-            if (data.rightanswerId == myAnswerRight) {
-                console.log(data, index)
-                myAnswer[index] = data.rightanswerId
-            } else {
-                myAnswer[index] = 0
-            }
+            // if (data.rightanswerId == myAnswerRight) {
+                // var index = myAnswer.question.indexOf(myAnswerRight);
+                console.log(myAnswer)
+                $('#numQuest'+data.index).html(" ("+myAnswerRight+")")
+                $('#btn'+data.index).addClass("btn-primary")
+                $('#btn'+data.index).removeClass("btn-light")
+                $('.answer').prop({disabled:true})
+                myAnswer.push({'question': myAnswerRight,'answer':data.rightanswerId})
+            // } else {
+            //     myAnswer.push({index: 0})
+            // }
+
+            console.log(myAnswer)
         }
 
         $scope.submit = function () {
-            console.log(myAnswer)
-            myAnswer.forEach((element, index) => {
-                if (element == 0) {
-                    $('.r-' + index).hide()
-                    $('.w-' + index).show()
-                } else {
-                    $('.r-' + index).show()
-                    $('.w-' + index).hide()
-                }
-            })
+            // console.log(myAnswer)
+            if(myAnswer.length < 5) {
+                alert('Please complete your task.')
+            } else {
+                myAnswer.forEach((element, index) => {
+                    console.log(element)
+                    if (element.question != element.answer) {
+                        $('.r-' + element.answer).hide()
+                        $('.w-' + element.answer).show()
+                    } else {
+                        $('.r-' + element.answer).show()
+                        $('.w-' + element.answer).hide()
+                    }
+                })
+            }
         }
     });
 });
